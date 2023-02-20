@@ -15,7 +15,7 @@ extract known file types) and `--run-as=root` (indicate root user).
 * ***3.-*** This created a folder called ***_flag.extracted***. In this folder there is a file called ***64***. I ran the
 command `file` on it. It indicates it’s a `GZIP` compressed data file, so I ran again `Binwalk` with the same options as the step before.
 
-* ***4.-*** This created a folder called ***_64.extracted*** with two files: ***Flag.gz’ and ***flag***. I ran file command on ***flag*** and determines it 
+* ***4.-*** This created a folder called ***_64.extracted*** with two files: ***Flag.gz’*** and ***flag***. I ran file command on ***flag*** and determines it 
 is a `LZIP` compressed archive. Then I decompressed ***flag.gz*** and result in the same `LZIP` file than before so I worked with it. I tried to decompress 
 the file with `Binwalk`, but it doesn’t work so I installed `LZIP` (`apt-get install lzip`) in order to do so. (I will have to do this installation step with `LZ4`,
 `LZMA` and `LZOP` in the following steps) Once I installed it, I decompressed the file called ***flag*** with `LZIP` and the options `-d` (for decompress) and `-k` 
